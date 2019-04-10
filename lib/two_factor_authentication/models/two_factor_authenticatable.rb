@@ -109,7 +109,7 @@ module Devise
           }
         end
 
-        def iv_for_attribute(algorithm = 'aes-256-cbc')
+        def iv_for_attribute(algorithm = 'aes-256-gcm')
           iv = encrypted_otp_secret_key_iv
 
           if iv.nil?
